@@ -2,6 +2,9 @@
 <resources>
 
     <string name="app_name">AdivinaNumero</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="adivina">He pensado un número entre 1 y 100. ¡Adivina cual es!</string>
+    <string name="intentos">Llevas x intentos</string>
+    <string name="intentalo">¡Intentalo!</string>
+    <string name="probar">Probar</string>
 
 </resources>
