@@ -21,27 +21,26 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		// Obtenemos el objeto Button a partir de su id.
-		Boton = (Button) findViewById(R.id.button);
-		intentosText = (TextView) findViewById(R.id.textView1);
 		
-		// Nos hacemos observadores de sus pulsaciones.
-		Boton.setOnClickListener(
-			new View.OnClickListener() {
-				public void onClick(View v) {
-				verificarNumero();
-			}
-			}
-		);
+		intentosText = (TextView) findViewById(R.id.textView1);
+
+	
+
 
 	}
 	
-	public void verificarNumero() {
+	public void verificarNumero(View v) {
+		intentos++;
 		 android.util.Log.e(TAG, "Pulsado");
-		 
+		 intentosText.setVisibility(View.VISIBLE);
+		 android.content.res.Resources res = getResources();
+		 String intentosTexto = res.getQuantityString(
+					R.plurals.intentos,
+					intentos,
+					intentos);
+		 intentosText.setText(intentosTexto);
 		 
 	}
 	
-	private Button Boton = null;
-	private TextView intentosText = null;
+	private TextView intentosText;
 }

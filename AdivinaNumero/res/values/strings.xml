@@ -6,5 +6,10 @@
     <string name="intentos">Llevas x intentos</string>
     <string name="intentalo">¡Intentalo!</string>
     <string name="probar">Probar</string>
+    <plurals name="intentos">
+		<item quantity="one">LLevas %d intento</item>
+		<item quantity="other">LLevas %d intentos</item>
+	</plurals>
+    
 
 </resources>
