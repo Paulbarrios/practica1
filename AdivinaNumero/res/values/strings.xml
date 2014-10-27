@@ -13,5 +13,6 @@
     <string name="mayor">¿%1$d? ¡Uy! El número que he pensado es mayor.</string>
     <string name="menor">¿%1$d? ¡Uy! El número que he pensado es menor.</string>
     <string name="igual">El numero era el %1$d has ganado.</string>
+    <string name="vacio">No has puesto ningun numero.</string>
 
 </resources>
