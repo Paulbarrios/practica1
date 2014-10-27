@@ -10,6 +10,8 @@
 		<item quantity="one">LLevas %d intento</item>
 		<item quantity="other">LLevas %d intentos</item>
 	</plurals>
-    
+    <string name="mayor">¿%1$d? ¡Uy! El número que he pensado es mayor.</string>
+    <string name="menor">¿%1$d? ¡Uy! El número que he pensado es menor.</string>
+    <string name="igual">El numero era el %1$d has ganado.</string>
 
 </resources>

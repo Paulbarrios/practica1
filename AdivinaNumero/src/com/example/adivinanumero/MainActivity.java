@@ -1,5 +1,7 @@
 package com.example.adivinanumero;
 
+import java.util.Random;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -26,6 +28,7 @@ public class MainActivity extends Activity {
 		intentosText = (TextView) findViewById(R.id.textView1);
 		cajaTexto = (EditText) findViewById(R.id.editText1);
 		adivina = (TextView) findViewById(R.id.textView11);
+		intentos = (int) Math.round(Math.random()*100);
 
 	
 
@@ -43,12 +46,18 @@ public class MainActivity extends Activity {
 					intentos);
 		 intentosText.setText(intentosTexto);
 		 int numeroCaja = Integer.parseInt(cajaTexto.getText().toString());
-		 if(numeroCaja > numeroAdivinar){
-			adivina.setText("Funciona Pringao!!"); 
+		 if(numeroCaja < numeroAdivinar){
+			String format = res.getString(R.string.mayor);
+			String mayor = String.format(format, numeroCaja);
+			adivina.setText(mayor); 
 		 }else if(numeroCaja > numeroAdivinar){
-			 
+			String format = res.getString(R.string.menor);
+			String menor = String.format(format, numeroCaja);
+			adivina.setText(menor); 
 		 }else if(numeroCaja == numeroAdivinar){
-			 
+			String format = res.getString(R.string.igual);
+			String igual = String.format(format, numeroCaja);
+			adivina.setText(igual); 
 		 }
 		 
 		 
