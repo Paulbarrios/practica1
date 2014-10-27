@@ -6,12 +6,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
 	private int intentos = 0;
-	private int numeroAdivinar = 0;
+	private int numeroAdivinar = 50;
 	private static final String TAG = "Pulsame";
 
 
@@ -23,6 +24,8 @@ public class MainActivity extends Activity {
 		
 		
 		intentosText = (TextView) findViewById(R.id.textView1);
+		cajaTexto = (EditText) findViewById(R.id.editText1);
+		adivina = (TextView) findViewById(R.id.textView11);
 
 	
 
@@ -39,8 +42,19 @@ public class MainActivity extends Activity {
 					intentos,
 					intentos);
 		 intentosText.setText(intentosTexto);
+		 int numeroCaja = Integer.parseInt(cajaTexto.getText().toString());
+		 if(numeroCaja > numeroAdivinar){
+			adivina.setText("Funciona Pringao!!"); 
+		 }else if(numeroCaja > numeroAdivinar){
+			 
+		 }else if(numeroCaja == numeroAdivinar){
+			 
+		 }
+		 
 		 
 	}
 	
+	private TextView adivina;
 	private TextView intentosText;
+	private EditText cajaTexto;
 }
