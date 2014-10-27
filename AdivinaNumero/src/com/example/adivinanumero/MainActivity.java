@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
 	public void verificarNumero(View v) {
 		intentos++;
 		 android.util.Log.e(TAG, "Pulsado");
+		 android.util.Log.e(TAG, "Pulsado");
 		 intentosText.setVisibility(View.VISIBLE);
 		 android.content.res.Resources res = getResources();
 		 String intentosTexto = res.getQuantityString(
