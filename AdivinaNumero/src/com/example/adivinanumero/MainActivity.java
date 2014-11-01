@@ -20,14 +20,13 @@ public class MainActivity extends Activity {
 		intentosText = (TextView) findViewById(R.id.textView1);
 		cajaTexto = (EditText) findViewById(R.id.editText1);
 		adivina = (TextView) findViewById(R.id.textView11);
-		numeroAdivinar = (int) Math.round(Math.random() * 100);
-
+		restoreMe(savedInstanceState);
+		android.util.Log.e(TAG, numeroAdivinar+"");
 	}
 
 	public void verificarNumero(View v) {
 		int numeroCaja = 0;
 		String numero = cajaTexto.getText().toString();
-		android.util.Log.e(TAG, numero);
 		if (!numero.equals("")) {
 			intentos++;
 			intentosText.setVisibility(View.VISIBLE);
@@ -60,6 +59,35 @@ public class MainActivity extends Activity {
 		}
 
 	}
+	
+  @Override
+    protected void onSaveInstanceState(Bundle outState) {
+    	super.onSaveInstanceState(outState);
+        outState.putInt("intentos", intentos);
+        outState.putInt("numeroAdivinar", numeroAdivinar);
+        outState.putString("adivina", (String) adivina.getText());
+        outState.putString("intentosText", (String) intentosText.getText());
+        
+    }
+  
+  private void restoreMe(Bundle state){
+  
+  	if (state!=null) {
+  		intentos = state.getInt("intentos");
+  		numeroAdivinar = state.getInt("numeroAdivinar");
+  		adivina.setText(state.getString("adivina"));
+  		intentosText.setText(state.getString("intentosText"));
+  	}else{
+  		valoresACero();
+  	}
+   }
+  
+  public void valoresACero() {
+	  intentos = 0;
+	  numeroAdivinar = (int) Math.round(Math.random() * 100);
+  }
+
+
 
 	private TextView adivina;
 	private TextView intentosText;
