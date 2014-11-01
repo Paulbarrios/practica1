@@ -9,9 +9,10 @@
 		<item quantity="one">You tried %d time</item>
 		<item quantity="other">You tried %d times</item>
 	</plurals>
-    <string name="mayor">¿%1$d? Ups! The number is bigger.</string>
-    <string name="menor">¿%1$d? Ups! The number is lower.</string>
+    <string name="mayor">%1$d? Ups! The number is bigger.</string>
+    <string name="menor">%1$d? Ups! The number is lower.</string>
     <string name="igual">The number is %1$d. You win.</string>
     <string name="vacio">It must not be empty.</string>
+    <string name="nuevoJuego">Play again</string>
 
 </resources>
