@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Guess The Number</string>
+    <string name="adivina">I think a number between 1 and 100. What is the number?</string>
+    <string name="intentalo">Try your number!</string>
+    <string name="probar">Try</string>
+    <plurals name="intentos">
+		<item quantity="one">You tried %d time</item>
+		<item quantity="other">You tried %d times</item>
+	</plurals>
+    <string name="mayor">¿%1$d? Ups! The number is bigger.</string>
+    <string name="menor">¿%1$d? Ups! The number is lower.</string>
+    <string name="igual">The number is %1$d. You win.</string>
+    <string name="vacio">It must not be empty.</string>
+
+</resources>

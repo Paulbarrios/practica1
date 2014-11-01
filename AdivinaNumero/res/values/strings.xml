@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">AdivinaNumero</string>
+    <string name="app_name">Adivina Numero</string>
     <string name="adivina">He pensado un número entre 1 y 100. ¡Adivina cual es!</string>
-    <string name="intentos">Llevas x intentos</string>
     <string name="intentalo">¡Intentalo!</string>
     <string name="probar">Probar</string>
     <plurals name="intentos">
