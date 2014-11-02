@@ -3,6 +3,7 @@ package com.example.adivinanumero;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +31,22 @@ public class MainActivity extends Activity {
 		
 		restoreMe(savedInstanceState);
 		android.util.Log.e(TAG, numeroAdivinar+"");
+		
+		cajaTexto.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    verificarNumero(getWindow().getDecorView().getRootView());
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+        });
+		
+		
+		
 	}
 	
 	public void verificarNumero(View v) {
